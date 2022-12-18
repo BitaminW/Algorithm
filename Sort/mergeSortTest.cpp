@@ -6,8 +6,10 @@ int N, arr[1000001];
 int* arr2;
 
 void merge(int left, int right)
-{
-	int mid = (left + right) / 2;
+{	
+	// (left + right) / 2 로 하게 될 경우 오버플로우 발생
+	// 만약 left + right가 int의 범위를 벗어날 경우 문제가 생김
+	int mid = left + ((right - left) / 2);
 
 	int i = left;
 	int j = mid + 1;
