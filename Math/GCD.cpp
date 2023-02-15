@@ -1,3 +1,4 @@
+// 재귀
 int gcd1(int x, int y) {
 	if (y == 0) {
 		return x;
@@ -7,6 +8,7 @@ int gcd1(int x, int y) {
 	}
 }
 
+// 비재귀
 int gcd2(int x, int y) {
 	int temp;
 	if (x < y) {
