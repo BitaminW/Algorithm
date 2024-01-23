@@ -16,25 +16,23 @@ bool isPalindrome(const char *s){
             if(i + bias_left == str_len)
             return true;
         }
-
+        
         while(!isalnum(s[str_len - i - bias_right])){
             bias_right++;
         }
-
+        
         if((i + bias_left) >= (str_len - i - bias_right)){
             break;
         }
-            
-
+        
         // 팰린드롬 비교
         if(tolower(s[i + bias_left]) != tolower(s[str_len - i - bias_right])){
             return false;
         }
-            
     }
+    
     return true;
 }
-
 
 int main(){
     
